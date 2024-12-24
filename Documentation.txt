@@ -1,0 +1,32 @@
+Overview
+
+The "Movie Summary Searcher Project - Mera Manoranajan" class is a "Python application" that allows users to search for "movies" by "name and year", display a list of found movies, and retrieve a "summary" of a selected movie. It utilizes the "OMDB API" for movie data and the "Hugging Face Transformers library" for summarization.
+
+
+Requirements
+
+1. Python 3.x
+2. requests library
+3. transformers library
+
+Installation
+
+1. Install the required libraries:
+
+pip install requests transformers
+
+2. Ensure you have an API key for the OMDb API. You can obtain one by registering at OMDb API.
+
+3. Click on the link given below to get the access to the OMDb API:
+
+https://www.omdbapi.com/apikey.aspx?__EVENTTARGET=freeAcct&__EVENTARGUMENT=&__LASTFOCUS=&__VIEWSTATE=%2FwEPDwUKLTIwNDY4MTIzNQ9kFgYCAQ9kFgICBw8WAh4HVmlzaWJsZWhkAgIPFgIfAGhkAgMPFgIfAGhkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYDBQtwYXRyZW9uQWNjdAUIZnJlZUFjY3QFCGZyZWVBY2N0oCxKYG7xaZwy2ktIrVmWGdWzxj%2FDhHQaAqqFYTiRTDE%3D&__VIEWSTATEGENERATOR=5E550F58&__EVENTVALIDATION=%2FwEdAAU%2BO86JjTqdg0yhuGR2tBukmSzhXfnlWWVdWIamVouVTzfZJuQDpLVS6HZFWq5fYpioiDjxFjSdCQfbG0SWduXFd8BcWGH1ot0k0SO7CfuulHLL4j%2B3qCcW3ReXhfb4KKsSs3zlQ%2B48KY6Qzm7wzZbR&at=freeAcct&Email=
+
+4. Select FREE option and fill your details and click Submit Button.
+
+5. A Screenshot will be attached for your help.
+
+6. You will shortly receive a mail (which you filled on the website), and then you will have to activate your api key by clicking the activatation link in the mail.
+
+7. After activatation, you may copy your key (included in the mail), and paste in line 5 ---> def __init__(self, api_key="YOUR_KEY_HERE"): in the place of YOUR_KEY_HERE.
+
+8. Run the Python file and let it work !
