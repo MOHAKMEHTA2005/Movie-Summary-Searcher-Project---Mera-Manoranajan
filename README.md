@@ -1,7 +1,7 @@
 # Movie Summary Searcher - Mera Manoranjan
 
 ## Overview
-MovieSearcher is a Python application that allows users to search for movies by name and year, display a list of found movies, and retrieve a summary of a selected movie. It uses the OMDB API for movie data and the Hugging Face Transformers library for summarization.
+The "Movie Summary Searcher - Mera Manoranjan" is a Python application that allows users to search for movies by name and year, display a list of found movies, and retrieve a summary of a selected movie. It utilizes the OMDb API for movie data and the Hugging Face Transformers library for summarization.
 
 ## Features
 - Search for movies by name and year.
