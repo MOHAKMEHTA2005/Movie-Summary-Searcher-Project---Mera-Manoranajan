@@ -1,19 +1,16 @@
-# Movie Summary Searcher - Mera Manoranjan
+# React + Vite
 
-## Overview
-The "Movie Summary Searcher - Mera Manoranjan" is a Python application that allows users to search for movies by name and year, display a list of found movies, and retrieve a summary of a selected movie. It utilizes the OMDb API for movie data and the Hugging Face Transformers library for summarization.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
-- Search for movies by name and year.
-- Display a list of found movies.
-- Retrieve and display a summary of a selected movie.
+Currently, two official plugins are available:
 
-## Requirements
-- Python 3.x
-- requests library
-- transformers library
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Installation
-1. Install the required libraries:
-   
-   pip install requests transformers
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

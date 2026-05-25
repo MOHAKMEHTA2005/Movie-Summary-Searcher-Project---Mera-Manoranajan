@@ -1,0 +1,192 @@
+:root {
+  /* Color Palette - Deep Obsidian & Glowing Neon */
+  --bg-primary: #07070a;
+  --bg-secondary: #0f101a;
+  --bg-tertiary: #17192a;
+  --bg-glass: rgba(15, 16, 26, 0.6);
+  --bg-glass-hover: rgba(23, 25, 42, 0.85);
+  
+  --accent-primary: #8b5cf6; /* Glowing Purple */
+  --accent-secondary: #f43f5e; /* Hot Rose */
+  --accent-tertiary: #06b6d4; /* Electric Cyan */
+  --accent-gold: #f59e0b; /* Rating Gold */
+  
+  --text-primary: #f3f4f6; /* Bright Text */
+  --text-secondary: #9ca3af; /* Muted Text */
+  --text-muted: #6b7280; /* Muted Info */
+  
+  --border-light: rgba(255, 255, 255, 0.07);
+  --border-glow: rgba(139, 92, 246, 0.35);
+  
+  --gradient-glow: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  --gradient-cyan: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  --gradient-dark: linear-gradient(180deg, rgba(7, 7, 10, 0.7) 0%, #07070a 100%);
+  
+  --shadow-neon: 0 0 20px rgba(139, 92, 246, 0.25);
+  --shadow-neon-strong: 0 0 30px rgba(139, 92, 246, 0.45);
+  --shadow-dark: 0 10px 30px -5px rgba(0, 0, 0, 0.6);
+  
+  /* Fonts */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  
+  /* System Controls */
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  color-scheme: dark;
+  
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(244, 63, 94, 0.05) 0%, transparent 40%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Base Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+button, input, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Premium Utilities */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  box-shadow: var(--shadow-dark);
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.glow-btn {
+  background: var(--gradient-glow);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px 24px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(244, 63, 94, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.glow-btn:hover::before {
+  left: 100%;
+}
+
+.glow-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-neon-strong);
+}
+
+.glow-btn:active {
+  transform: translateY(1px);
+}
+
+/* Skeleton Loading Animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    background-color: var(--bg-tertiary);
+  }
+  50% {
+    opacity: 0.8;
+    background-color: rgba(25, 27, 43, 0.8);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.05);
+  }
+}
+
+.skeleton {
+  animation: pulse-glow 1.5s infinite ease-in-out;
+  border-radius: 8px;
+}
+
+/* Fading elements */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in-up 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Root Main Layout */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
